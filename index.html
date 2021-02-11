@@ -1,11 +1,34 @@
 <html>
 	<head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap" rel="stylesheet">
 		<meta charset="utf-8">
 		<title> INTRO </title>
 	</head>
-	<body>
-		<video>
-			<source src='intro-sw.mp4'>
-		</video>
+    <body style="background-color: black;">
+        <div id="videoContainer" style="visibility: hidden; height: 0;">
+            <video id='introVideo' style='height: 100%; width: 100%; object-fit: fill;'>
+                <source src='intro-sw.mp4'>
+            </video>
+        </div>
+        <div id="playButton" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <input type="button" onclick="playButton()" value="GO FOR IT" style="font-family: 'Stalinist One', cursive; background-color: black; border: 2px solid blueviolet; color: blueviolet; padding: 30px;">
+        </div>
+        <script>
+            var objVideo = document.getElementById("introVideo");
+            var elem = document.documentElement;         
+            function playButton() {
+                document.getElementById("videoContainer").setAttribute("style","cursor: none;");
+                document.getElementById("playButton").setAttribute("style","position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); visibility: hidden;");
+                objVideo.play();
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.webkitRequestFullscreen) { /* Safari */
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { /* IE11 */
+                    elem.msRequestFullscreen();
+                }
+            }
+        </script>
 	</body>
 </html>
