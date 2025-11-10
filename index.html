@@ -1,34 +1,193 @@
-<html>
-	<head>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap" rel="stylesheet">
-		<meta charset="utf-8">
-		<title> ... </title>
-	</head>
-    <body style="background-color: black; margin: 0;">
-        <div id="videoContainer" style="visibility: hidden; height: 0;">
-            <video id='introVideo' style='height: 100%; width: 100%; object-fit: fill;'>
-                <source src='intro-sw.mp4'>
-            </video>
+<!doctype html>
+<html class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/output.css" rel="stylesheet">
+</head>
+<body class="text-amber-500  font-mono font-semibold mt-10 mb-10">
+  <!-- Header -->
+  <div class="flex flex-col items-center">
+
+      <h1 class="text-[2rem]">
+        Álvaro Antônio
+      </h1>
+      <h2 class="text-[1rem]"> -=&lt; Portfólio acadêmico &gt;=-</h2>
+      <h2 class="text-[1rem]"> Candidato EPTA </h2>
+      <nav class="text-[1rem] mt-2 w-fit max-w-2xl grid md:block place-items-center print:hidden">
+        <a href="#cursos" class="block md:inline">Minicursos</a><span class="hidden md:inline"> • </span>
+        <a href="#extensao" class="block md:inline">Extensão</a><span class="hidden md:inline"> • </span>
+        <a href="#competicoes" class="block md:inline">Competições</a>
+        <a href="#palestras" class="block md:inline">Palestras</a><span class="hidden md:inline"> • </span>
+      </nav>
+  </div>
+
+  <div class="w-full flex justify-center m-1 ml-0">
+    <div class="sm:w-full lg:max-w-4xl p-2">
+      <!-- Minicursos -->
+      <div class="mb-2 flex flex-col justify-center" id="cursos">
+        <h2 class="text-[1.5rem] text-center mb-2"> -= Minicursos =- </h2>
+    
+        <div class="border border-l-8 w-full p-2 m-1 break-inside-avoid">
+          <h3 class="text-lg">Programação e Robótica - SuperGeeks </h3>
+          <p class="whitespace-pre-wrap"> > Curso presencial de programação e robótica para crianças e adolescentes.</p>
+          <nav class="flex justify-end w-full">
+            <a href="pdf/Cursos - Programação e Robótica.pdf" target="_blank" rel="noopener noreferrer">Certificados</a>
+          </nav>
         </div>
-        <div id="playButton" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-            <input type="button" onclick="playButton()" value="GO FOR IT" style="font-family: 'Stalinist One', cursive; background-color: black; border: 2px solid blueviolet; color: blueviolet; padding: 30px;">
+        <div class="border border-l-8 w-full p-2 m-1 break-inside-avoid">
+          <h3 class="text-lg">Devops: Containers Docker no fluxo de Dev à Release - IFTM 2019 </h3>
+          <p class="whitespace-pre-wrap"> > Curso presencial sobre containers Docker ministrado durante a Semana Nacional de Ciência e Tencologia (IFTM 2019).</p>
+          <nav class="flex justify-end w-full">
+            <a href="pdf/SNCT 2019 IFTM - Devops_ Containers Docker no fluxo de Dev à Release.pdf" target="_blank" rel="noopener noreferrer">Certificado</a>
+          </nav>
         </div>
-        <script>
-            var objVideo = document.getElementById("introVideo");
-            var elem = document.documentElement;         
-            function playButton() {
-                document.getElementById("videoContainer").setAttribute("style","cursor: none;");
-                document.getElementById("playButton").setAttribute("style","position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); visibility: hidden;");
-                objVideo.play();
-                if (elem.requestFullscreen) {
-                    elem.requestFullscreen();
-                } else if (elem.webkitRequestFullscreen) { /* Safari */
-                    elem.webkitRequestFullscreen();
-                } else if (elem.msRequestFullscreen) { /* IE11 */
-                    elem.msRequestFullscreen();
-                }
-            }
-        </script>
-	</body>
+      </div>
+    </div>
+  </div>
+  <div class="w-full flex justify-center m-1 ml-0">
+    <div class="sm:w-full lg:max-w-4xl p-2">
+      <!-- Extensão -->
+      <div class="mb-2 flex flex-col justify-center" id="extensao">
+        <h2 class="text-[1.5rem] text-center mb-2"> -= Extensão =- </h2>
+        
+        <div class="border border-l-8 w-full p-2 m-1 break-inside-avoid">
+          <h3 class="text-lg">Robótica no campus UdiCentro - IFTM 2021</h3>
+          <p class="text-center m-2"> &lt; Tutor &gt;</p>
+          <p class="whitespace-pre-wrap"> > Projeto de extensão com o intuito de ministrar aulas de robótica para alunos do IFTM, realizando atividades práticas em simulador e preparando para competições de robóticas OBR e MNR.</p>
+          <nav class="flex justify-end w-full">
+            <a href="pdf/XXIV Ciência Viva - Apresentação.pdf" target="_blank" rel="noopener noreferrer">Certificado</a>
+          </nav>
+        </div>
+
+        <div class="border border-l-8 w-full p-2 m-1 break-inside-avoid">
+          <h3 class="text-lg">XXIV Ciência Viva - UFU 2019</h3>
+          <p class="text-center m-2"> &lt; 2º Lugar &gt;</p>
+          <p class="whitespace-pre-wrap"> > Feira do conhecimento, realizada anualmente em Uberlândia-MG, aberta a estudantes da educação básica com o objetivo de promover o desenvolvimento da criatividade e da capacidade inventiva e investigativa em todas as áreas de conhecimento.</p>
+          <p class="text-center m-2">   - Trabalho apresentado - <br> 'Sensor de detecção de acidentes e sistema anti-roubo baseado em microcontroladores, transmissão via rádio e rede móvel GSM (SDA & SAR)'</p>
+          <nav class="flex justify-end w-full">
+            <a href="pdf/XXIV Ciência Viva - 2o Lugar.pdf" target="_blank" rel="noopener noreferrer">Premiação</a>
+            <a href="pdf/XXIV Ciência Viva - Apresentação.pdf" target="_blank" rel="noopener noreferrer">Certificado</a>
+          </nav>
+        </div>
+
+        <div class="border border-l-8 w-full p-2 m-1 break-inside-avoid">
+          <h3 class="text-lg">Arduino Day - IFTM 2019</h3>
+          <p class="whitespace-pre-wrap"> > Evento voltado para comunidade maker com oficinas e exposições de trabalhos desenvolvidos com a plataforma Arduino.</p>
+          <p class="text-center m-2">   - Trabalho apresentado - <br> 'Comunicação UART via Infravermelho'</p>
+          <nav class="flex justify-end w-full">
+            <a href="pdf/XXIV Ciência Viva - 2o Lugar.pdf" target="_blank" rel="noopener noreferrer">Premiação</a>
+            <a href="pdf/XXIV Ciência Viva - Apresentação.pdf" target="_blank" rel="noopener noreferrer">Certificado</a>
+          </nav>
+        </div>
+
+        <div class="border border-l-8 w-full p-2 m-1 break-inside-avoid">
+          <h3 class="text-lg">Semana Nacional de Ciência e Tecnologia (SNCT) - IFTM 2019</h3>
+          <p class="whitespace-pre-wrap"> > Semana com o objetivo de aproximar a Ciência e a Tecnologia da população, por meio de eventos que congregam instituições de todo o País em torno de atividades de divulgação científica.</p>
+          <p class="whitespace-pre-wrap">   - Palestra - A história da física dos buracos negros</p>
+          <p class="whitespace-pre-wrap">   - Palestra - Centenário do Eclipse de Sobral: o Brasil e a Astrofísica</p>
+          <p class="whitespace-pre-wrap">   - Palestra - Razões para uma bioeconomia à luz da trajetória humana</p>
+          <p class="whitespace-pre-wrap">   - Workshop - Devops - Containers Docker no fluxo de Dev à Release</p>
+          <p class="whitespace-pre-wrap">   - Workshop - Feira Gastronômica (Cenid)</p>
+          <p class="whitespace-pre-wrap">   - Workshop - Just Dance</p>
+          <nav class="flex justify-end w-full">
+            <a href="#" target="_blank" rel="noopener noreferrer">Certificado</a>
+          </nav>
+        </div>
+        
+        <div class="border border-l-8 w-full p-2 m-1 break-inside-avoid hidden">
+          <h3 class="text-lg">III Workshop Ambiental - IFTM 2019</h3>
+          <p class="whitespace-pre-wrap"> > Evento com atividades e palestras voltadas ao tema ambiental realizadas no campus.</p>
+          <p class="whitespace-pre-wrap">   - Palestra - Coleta Seletiva no meu espaço de vivência</p>
+          <p class="whitespace-pre-wrap">   - Palestra - Rios Livres: Uma iniciativa em favor do uso múltiplo e sustentável das águas</p>
+          <nav class="flex justify-end w-full">
+            <a href="#" target="_blank" rel="noopener noreferrer">Certificado</a>
+          </nav>
+        </div>
+        
+        <div class="border border-l-8 w-full p-2 m-1 break-inside-avoid hidden">
+          <h3 class="text-lg">III CENID em Cena - IFTM 2019</h3>
+          <p class="whitespace-pre-wrap"> > Atividades de Idiomas e Internacionalização.</p>
+          <nav class="flex justify-end w-full">
+            <a href="#" target="_blank" rel="noopener noreferrer">Certificado</a>
+          </nav>
+        </div>
+
+        <div class="border border-l-8 w-full p-2 m-1 break-inside-avoid hidden">
+          <h3 class="text-lg">I Mostra de Cinema Negro</h3>
+          <p class="whitespace-pre-wrap"> > Workshop com exibição de filmes do cinema negro.</p>
+          <nav class="flex justify-end w-full">
+            <a href="#" target="_blank" rel="noopener noreferrer">Certificado</a>
+          </nav>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="w-full flex justify-center m-1 ml-0">
+    <div class="sm:w-full lg:max-w-4xl p-2">
+      
+      <!-- Competições -->
+      <div class="mb-2 flex flex-col justify-center" id="competicoes">
+        <h2 class="text-[1.5rem] text-center mb-2 print:break-after-avoid"> -= Competições =- </h2>
+        
+        
+        <div class="border border-l-8 w-full p-2 m-1 break-inside-avoid">
+          <h3 class="text-lg">Olimpíada Brasileira Robótica - Modalidade Teórica (OBR-TE) - 2019</h3>
+          <p class="text-center m-2"> &lt; Prata Nacional &gt;</p>
+          <p class="whitespace-pre-wrap"> > Olimpíada com o objetivo de transformar a Robótica Educacional em um tema acessível e estimulante dentro da sala de aula – descobrindo novos jovens talentos e atualizando o processo de ensino-aprendizagem brasileiro. </p>
+          <nav class="flex justify-end w-full">
+            <a href="#" target="_blank" rel="noopener noreferrer">Site do evento</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">Certificado</a>
+          </nav>
+        </div>
+        <div class="border border-l-8 w-full p-2 m-1 break-inside-avoid">
+          <h3 class="text-lg"> II Maratona de Redes de Computadores </h3>
+          <p class="text-center m-2"> &lt; 2º Lugar &gt;</p>
+          <p class="whitespace-pre-wrap"> > Maratona com o objetivo de mensurar e estimular novos conhecimentos na área de Redes de Computadores entre alunos de cursos técnicos de nível médio de tecnologia da cidade de Uberlândia</p>
+          <nav class="flex justify-end w-full">
+            <a href="#" target="_blank" rel="noopener noreferrer">Site do evento</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">Certificado</a>
+          </nav>
+        </div>
+        <div class="border border-l-8 w-full p-2 m-1 break-inside-avoid">
+          <h3 class="text-lg"> Olimpíada Brasileira de Informática (OBI) - 2019 </h3>
+          <p class="text-center m-2"> &lt; 35º Lugar &gt;</p>
+          <p class="whitespace-pre-wrap"> > Competição de programação realizada anualmente desde 1999 pela Sociedade Brasileira de Computação. Tem por objetivo despertar nos alunos o interesse por ciência da computação.</p>
+          <nav class="flex justify-end w-full">
+            <a href="#" target="_blank" rel="noopener noreferrer">Site do evento</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">Certificado</a>
+          </nav>
+        </div>
+        <div class="border border-l-8 w-full p-2 m-1 break-inside-avoid">
+          <h3 class="text-lg">Olimpíada Brasileira Robótica - Modalidade Prática (OBR-PR) - 2019</h3>
+          <p class="text-center m-2"> &lt; Participação regional &gt;</p>
+          <p class="whitespace-pre-wrap"> > Olimpíada com o objetivo de transformar a Robótica Educacional em um tema acessível e estimulante dentro da sala de aula – descobrindo novos jovens talentos e atualizando o processo de ensino-aprendizagem brasileiro. </p>
+          <nav class="flex justify-end w-full">
+            <a href="#" target="_blank" rel="noopener noreferrer">Site do evento</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">Certificado</a>
+          </nav>
+        </div>
+        <div class="border border-l-8 w-full p-2 m-1 break-inside-avoid">
+          <h3 class="text-lg">Olimpíada Brasileira de Astronomia e Astronáutica (OBA) - 2019</h3>
+          <p class="text-center m-2"> &lt; Participante &gt;</p>
+          <p class="whitespace-pre-wrap"> > Evento nacional realizado nas escolas brasileiras com o objetivo principal a difusão do conhecimento pela sociedade brasileira sobre Astronomia, fomentando o interesse dos jovens pela Astronomia e pelo conhecimento científico em geral. </p>
+          <nav class="flex justify-end w-full">
+            <a href="#" target="_blank" rel="noopener noreferrer">Site do evento</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">Certificado</a>
+          </nav>
+        </div>
+        <div class="border border-l-8 w-full p-2 m-1 break-inside-avoid">
+          <h3 class="text-lg">19ª Maratona Regional de Programação - Algar 2019</h3>
+          <p class="text-center m-2"> &lt; Participante &gt;</p>
+          <p class="whitespace-pre-wrap"> > Maratona de programação realizada pela Algar Telecom. </p>
+          <nav class="flex justify-end w-full">
+            <a href="#" target="_blank" rel="noopener noreferrer">Site do evento</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
 </html>

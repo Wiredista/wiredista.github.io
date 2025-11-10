@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root {
+    --background-color: oklch(16.798% 0.03941 59.932);
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+a::before {
+    content: "[ ";
+}
+a::after {
+    content: " ]";
+}
+
+a:hover {
+    background-color: var(--color-amber-500);
+    color: var(--background-color)
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.1;
+  }
+}
