@@ -173,6 +173,12 @@
   .m-2 {
     margin: calc(var(--spacing) * 2);
   }
+  .my-2 {
+    margin-block: calc(var(--spacing) * 2);
+  }
+  .mt-1 {
+    margin-top: calc(var(--spacing) * 1);
+  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
@@ -246,6 +252,9 @@
   }
   .text-center {
     text-align: center;
+  }
+  .text-justify {
+    text-align: justify;
   }
   .font-mono {
     font-family: var(--font-mono);
